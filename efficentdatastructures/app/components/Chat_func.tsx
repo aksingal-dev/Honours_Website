@@ -6,7 +6,7 @@ export async function getOpenAIRes(message: string, context: object | undefined)
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer <API KEY REMOVED>',
       },
       body: JSON.stringify({
         "model": "text-davinci-003",
