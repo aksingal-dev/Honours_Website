@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "concurrently \"npm run build:css\" \"remix build -p 3002\" ",
+    "build:css": "tailwindcss -o ./app/tailwind.css",
+    "dev": "concurrently \"npm run dev:css \" \"remix dev -p 3002\" ",
+    "dev:css": "tailwindcss -o ./app/tailwind.css --watch",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@codemirror/lang-java": "^6.0.1",
+    "@remix-run/node": "^1.7.5",
+    "@remix-run/react": "^1.7.5",
+    "@remix-run/serve": "^1.7.5",
+    "@uiw/codemirror-theme-dracula": "^4.19.5",
+    "@uiw/codemirror-themes": "^4.19.5",
+    "@uiw/react-codemirror": "^4.19.5",
+    "codemirror": "^6.0.1",
+    "flowbite": "^1.6.0",
+    "flowbite-react": "^0.3.8",
+    "isbot": "^3.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga4": "^2.1.0",
+    "react-router-hash-link": "^2.4.3"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.7.5",
+    "@remix-run/eslint-config": "^1.7.5",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/react-router-hash-link": "^2.4.5",
+    "concurrently": "^7.5.0",
+    "eslint": "^8.23.1",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
